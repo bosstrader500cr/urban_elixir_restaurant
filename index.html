@@ -39,7 +39,7 @@
     .action-buttons {
       display: flex;
       flex-direction: column;
-      gap: 1.3em;
+      gap: 1em;
       margin: 2em 0 1em 0;
       align-items: center;
     }
@@ -55,6 +55,9 @@
       box-shadow: 0 1px 6px #ffd6a1d0;
       transition: background 0.26s;
       margin-bottom: 0.2em;
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
     }
     button:active, .review-btn:active {
       background: linear-gradient(90deg, #c779d0 0%, #feac5e 100%);
@@ -62,10 +65,6 @@
     .review-btn {
       text-decoration: none;
       display: inline-block;
-      text-align: center;
-    }
-    .pay-btn {
-      width: 100%;
     }
     .footer {
       text-align: center;
@@ -105,8 +104,14 @@
       <a href="https://search.google.com/local/writereview?placeid=ChIJv1wjlGcFDTkRjYWmzQa6haU" class="review-btn" target="_blank">
         Submit Review 😊
       </a>
-      <button class="pay-btn" onclick="window.location.href='upi://pay?pa=9654116711@kotak811'">
+      <button onclick="window.location.href='upi://pay?pa=9654116711@kotak811'">
         Pay with UPI
+      </button>
+      <button onclick="window.location.href='https://phon.pe/app'">
+        Open PhonePe
+      </button>
+      <button onclick="window.location.href='http://m.p-y.tm'">
+        Open Paytm
       </button>
     </div>
   </main>
