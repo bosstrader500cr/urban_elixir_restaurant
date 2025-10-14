@@ -26,21 +26,14 @@
     }
     main {
       flex: 1 1 auto;
-      padding: 1.2em;
+      padding: 1.2em 0 0.8em 0;
       max-width: 400px;
       margin: auto;
       background: #fff6ec;
       border-radius: 18px;
       box-shadow: 0 4px 32px rgba(210,150,113,0.06);
-    }
-    .form-section {
-      margin-bottom: 2em;
-    }
-    .action-buttons {
       display: flex;
       flex-direction: column;
-      gap: 1em;
-      margin: 2em 0 1em 0;
       align-items: center;
     }
     .review-btn {
@@ -54,7 +47,7 @@
       color: #fff;
       box-shadow: 0 1px 6px #ffd6a1d0;
       transition: background 0.26s;
-      margin-bottom: 1.2em;
+      margin-bottom: 2em;
       text-decoration: none;
       display: inline-block;
       text-align: center;
@@ -64,46 +57,59 @@
     .review-btn:active {
       background: linear-gradient(90deg, #c779d0 0%, #feac5e 100%);
     }
-    .pay-title {
-      font-size: 1.17em;
-      color: #ab7a4d;
-      font-weight: 600;
-      margin-bottom: 1.1em;
+    .section-title {
+      font-size: 1.15em;
+      color: #aa7c4c;
+      font-weight: 700;
+      padding-bottom: 0.5em;
+      padding-top: 0.3em;
       text-align: center;
-      margin-top: 0.4em;
+      letter-spacing: 1px;
     }
-    .pay-app-buttons {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 2em;
-      margin-bottom: 1em;
+    .icon-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 100px;
+      margin: 0 auto 2em auto;
+      text-align: center;
+      max-width: 260px;
+      justify-items: center;
     }
-    .pay-app-col {
+    .icon-col {
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-    .app-btn-img {
-      width: 68px;
-      height: 68px;
-      border-radius: 16px;
-      box-shadow: 0 2px 8px #dbc1a0;
-      border: 2px solid #ffd6a1;
-      background: #f6e2cf;
-      display: block;
       cursor: pointer;
-      margin-bottom: 0.5em;
-      transition: box-shadow 0.22s;
     }
-    .app-btn-img:active {
-      box-shadow: 0 4px 18px #c779d088;
+    .icon-img {
+      width: 58px;
+      height: 58px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #6666cc;
+      border: 2px solid #9b59b6;
+      background: #e9e1fa;
+      margin-bottom: 8px;
+      margin-top: 8px;
     }
-    .app-label {
-      font-size: 1.15em;
-      font-weight: 500;
-      color: #865809;
+    .icon-label {
+      font-size: 1.08em;
+      font-weight: 600;
+    }
+    .whatsapp-label { color: #25d366; }
+    .instagram-label { color: #e95950; }
+    .phonepe-label { color: #865809; }
+    .paytm-label { color: #003c6e; }
+    .pay-title {
+      font-size: 1.17em;
+      color: #ab7a4d;
+      font-weight: 650;
+      margin-bottom: 16px;
+      margin-top: 22px;
       text-align: center;
+    }
+    .form-section {
+      width: 100%;
+      margin-bottom: 2em;
     }
     .footer {
       text-align: center;
@@ -120,15 +126,29 @@
         padding: 1em 0.5em;
       }
       main {
-        padding: 0.4em;
+        padding: 0.4em 0 0.5em 0;
         max-width: 99vw;
       }
-      .pay-app-buttons {
-        gap: 1em;
+      .icon-img {
+        width: 43px;
+        height: 43px;
+        margin-bottom: 6px;
+        margin-top: 6px;
       }
-      .app-btn-img {
-        width: 55px;
-        height: 55px;
+      .icon-grid {
+        gap: 14px 6px;
+        max-width: 99vw;
+      }
+      .section-title,
+      .pay-title {
+        font-size: 1em;
+        margin-bottom: 7px;
+        margin-top: 10px;
+      }
+      .review-btn {
+        font-size: 1em;
+        padding: 0.7em 1em;
+        max-width: 95vw;
       }
     }
   </style>
@@ -138,33 +158,47 @@
     URBAN ELIXIR
   </header>
   <main>
+    <!-- 1. Submit Review Button -->
+    <a href="https://search.google.com/local/writereview?placeid=ChIJv1wjlGcFDTkRjYWmzQa6haU" class="review-btn" target="_blank">
+      Submit Review 😊
+    </a>
+    <!-- 2. Connect with Us Title -->
+    <div class="section-title">Connect with Us</div>
+    <!-- 3. WhatsApp and Instagram Icons -->
+    <div class="icon-grid">
+      <div class="icon-col" onclick="window.open('https://wa.me/+919911677119?text=Hi%20!%20Send%20Me%20amazing%20Deals', '_blank')">
+        <img src="whatsapp_logo.png" alt="WhatsApp" class="icon-img">
+        <span class="icon-label whatsapp-label">Get Super Offers</span>
+      </div>
+      <div class="icon-col" onclick="window.open('https://www.instagram.com/cafeurbanelixir?igsh=dzgzNG9xejhrcnpn', '_blank')">
+        <img src="instagram_logo.png" alt="Instagram" class="icon-img">
+        <span class="icon-label instagram-label">Follow Us</span>
+      </div>
+    </div>
+    <!-- 4. Pay With Title -->
+    <div class="pay-title">Pay With</div>
+    <!-- 5. PhonePe and Paytm Icons -->
+    <div class="icon-grid">
+      <div class="icon-col" onclick="window.open('https://phon.pe/app', '_blank')">
+        <img src="phonepe_logo.png" alt="PhonePe" class="icon-img">
+        <span class="icon-label phonepe-label">PhonePe</span>
+      </div>
+      <div class="icon-col" onclick="window.open('https://paytm.com', '_blank')">
+        <img src="paytm_logo.png" alt="Paytm" class="icon-img">
+        <span class="icon-label paytm-label">Paytm</span>
+      </div>
+    </div>
+    <!-- 6. Reserve or Feedback Form -->
     <div class="form-section">
-      <h2 style="font-weight:600; font-size:1.15em; color:#94704f; margin-bottom:0.6em;">Reserve or Feedback</h2>
+      <h2 style="font-weight:600; font-size:1.15em; color:#94704f; margin-bottom:0.6em;">Personal Details</h2>
       <iframe 
         src="https://docs.google.com/forms/d/e/1FAIpQLSfgrZi271OlpEurlvdMCw1_-pohWvg2sfiDOT-vBNNaWcZRjw/viewform?embedded=true"
         width="100%" height="730" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:10px; border:1px solid #ffd6a1;">
         Loading…
       </iframe>
     </div>
-    <div class="action-buttons">
-      <a href="https://search.google.com/local/writereview?placeid=ChIJv1wjlGcFDTkRjYWmzQa6haU" class="review-btn" target="_blank">
-        Submit Review 😊
-      </a>
-      <div class="pay-title">Pay With</div>
-      <div class="pay-app-buttons">
-        <div class="pay-app-col">
-          <img src="phonepe_logo.png" alt="PhonePe" class="app-btn-img"
-               onclick="window.location.href='https://phon.pe/app'">
-          <div class="app-label">PhonePe</div>
-        </div>
-        <div class="pay-app-col">
-          <img src="paytm_logo.png" alt="Paytm" class="app-btn-img"
-               onclick="window.location.href='http://m.p-y.tm'">
-          <div class="app-label">Paytm</div>
-        </div>
-      </div>
-    </div>
   </main>
+  <!-- 7. Footer -->
   <div class="footer">
     Thank You for visiting Urban Elixir!
   </div>
