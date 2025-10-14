@@ -43,7 +43,7 @@
       margin: 2em 0 1em 0;
       align-items: center;
     }
-    button, .review-btn {
+    .review-btn {
       padding: 0.9em 1.4em;
       font-size: 1.16em;
       border: none;
@@ -54,17 +54,56 @@
       color: #fff;
       box-shadow: 0 1px 6px #ffd6a1d0;
       transition: background 0.26s;
-      margin-bottom: 0.2em;
-      width: 100%;
-      max-width: 250px;
-      text-align: center;
-    }
-    button:active, .review-btn:active {
-      background: linear-gradient(90deg, #c779d0 0%, #feac5e 100%);
-    }
-    .review-btn {
+      margin-bottom: 1.2em;
       text-decoration: none;
       display: inline-block;
+      text-align: center;
+      width: 90%;
+      max-width: 250px;
+    }
+    .review-btn:active {
+      background: linear-gradient(90deg, #c779d0 0%, #feac5e 100%);
+    }
+    .pay-title {
+      font-size: 1.17em;
+      color: #ab7a4d;
+      font-weight: 600;
+      margin-bottom: 1.1em;
+      text-align: center;
+      margin-top: 0.4em;
+    }
+    .pay-app-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 2em;
+      margin-bottom: 1em;
+    }
+    .pay-app-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .app-btn-img {
+      width: 68px;
+      height: 68px;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #dbc1a0;
+      border: 2px solid #ffd6a1;
+      background: #f6e2cf;
+      display: block;
+      cursor: pointer;
+      margin-bottom: 0.5em;
+      transition: box-shadow 0.22s;
+    }
+    .app-btn-img:active {
+      box-shadow: 0 4px 18px #c779d088;
+    }
+    .app-label {
+      font-size: 1.15em;
+      font-weight: 500;
+      color: #865809;
+      text-align: center;
     }
     .footer {
       text-align: center;
@@ -83,6 +122,13 @@
       main {
         padding: 0.4em;
         max-width: 99vw;
+      }
+      .pay-app-buttons {
+        gap: 1em;
+      }
+      .app-btn-img {
+        width: 55px;
+        height: 55px;
       }
     }
   </style>
@@ -104,15 +150,19 @@
       <a href="https://search.google.com/local/writereview?placeid=ChIJv1wjlGcFDTkRjYWmzQa6haU" class="review-btn" target="_blank">
         Submit Review 😊
       </a>
-      <button onclick="window.location.href='upi://pay?pa=9654116711@kotak811'">
-        Pay with UPI
-      </button>
-      <button onclick="window.location.href='https://phon.pe/app'">
-        Open PhonePe
-      </button>
-      <button onclick="window.location.href='http://m.p-y.tm'">
-        Open Paytm
-      </button>
+      <div class="pay-title">Pay With</div>
+      <div class="pay-app-buttons">
+        <div class="pay-app-col">
+          <img src="phonepe_logo.png" alt="PhonePe" class="app-btn-img"
+               onclick="window.location.href='https://phon.pe/app'">
+          <div class="app-label">PhonePe</div>
+        </div>
+        <div class="pay-app-col">
+          <img src="paytm_logo.png" alt="Paytm" class="app-btn-img"
+               onclick="window.location.href='http://m.p-y.tm'">
+          <div class="app-label">Paytm</div>
+        </div>
+      </div>
     </div>
   </main>
   <div class="footer">
