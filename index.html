@@ -37,7 +37,7 @@
       align-items: center;
     }
     .review-btn {
-      margin-top : 24px;
+      margin-top: 24px;
       padding: 0.9em 1.4em;
       font-size: 1.16em;
       border: none;
@@ -76,6 +76,13 @@
       max-width: 260px;
       justify-items: center;
     }
+    /* Paytm/PhonePe grid specifically */
+    .pay-icon-grid {
+      gap: 30px 100px;
+      max-width: 320px;
+      width: 100%;
+      margin: 0 auto 2em auto;
+    }
     .icon-col {
       display: flex;
       flex-direction: column;
@@ -103,7 +110,7 @@
     .pay-title {
       font-size: 1.17em;
       color: #ab7a4d;
-      font-weight: 630;
+      font-weight: 680;
       margin-bottom: 16px;
       margin-top: 22px;
       text-align: center;
@@ -136,7 +143,8 @@
         margin-bottom: 6px;
         margin-top: 6px;
       }
-      .icon-grid {
+      .icon-grid,
+      .pay-icon-grid {
         gap: 14px 6px;
         max-width: 99vw;
       }
@@ -178,8 +186,8 @@
     </div>
     <!-- 4. Pay With Title -->
     <div class="pay-title">Pay With</div>
-    <!-- 5. PhonePe and Paytm Icons -->
-    <div class="icon-grid">
+    <!-- 5. PhonePe and Paytm Icons with custom gap -->
+    <div class="icon-grid pay-icon-grid">
       <div class="icon-col" onclick="window.open('https://phon.pe/app', '_blank')">
         <img src="phonepe_logo.png" alt="PhonePe" class="icon-img">
         <span class="icon-label phonepe-label">PhonePe</span>
