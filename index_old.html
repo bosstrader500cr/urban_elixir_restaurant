@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>URBAN ELIXIR - Restaurant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       background: #faf7f2;
@@ -31,7 +31,7 @@
       margin: auto;
       background: #fff6ec;
       border-radius: 18px;
-      box-shadow: 0 4px 32px rgba(210, 150, 113, 0.06);
+      box-shadow: 0 4px 32px rgba(210,150,113,0.06);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -67,30 +67,11 @@
       text-align: center;
       letter-spacing: 1px;
     }
-    .input-group {
-      width: 90%;
-      max-width: 320px;
-      margin: 10px 0;
-      display: flex;
-      flex-direction: column;
-    }
-    .input-label {
-      font-weight: 600;
-      color: #94704f;
-      margin-bottom: 6px;
-    }
-    .input-field {
-      padding: 8px 12px;
-      font-size: 1em;
-      border: 1.5px solid #ffd6a1;
-      border-radius: 8px;
-      outline-color: #aa7c4c;
-    }
     .icon-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px 100px;
-      margin: 20px auto 2em auto;
+      margin: 0 auto 2em auto;
       text-align: center;
       max-width: 260px;
       justify-items: center;
@@ -122,18 +103,10 @@
       font-size: 1.08em;
       font-weight: 600;
     }
-    .whatsapp-label {
-      color: #25d366;
-    }
-    .instagram-label {
-      color: #e95950;
-    }
-    .phonepe-label {
-      color: #865809;
-    }
-    .paytm-label {
-      color: #003c6e;
-    }
+    .whatsapp-label { color: #25d366; }
+    .instagram-label { color: #e95950; }
+    .phonepe-label { color: #865809; }
+    .paytm-label { color: #003c6e; }
     .pay-title {
       font-size: 1.17em;
       color: #ab7a4d;
@@ -141,6 +114,10 @@
       margin-bottom: 16px;
       margin-top: 22px;
       text-align: center;
+    }
+    .form-section {
+      width: 100%;
+      margin-bottom: 2em;
     }
     .footer {
       text-align: center;
@@ -194,70 +171,47 @@
     <a href="https://search.google.com/local/writereview?placeid=ChIJv1wjlGcFDTkRjYWmzQa6haU" class="review-btn" target="_blank">
       Rate Us : Show your ❤️😊
     </a>
-
-    <!-- 2. New Title -->
-    <div class="section-title">Start Your Journey With Us</div>
-
-    <!-- 3,4,5 Entry fields -->
-    <div class="input-group">
-      <label for="nameInput" class="input-label">Name :</label>
-      <input type="text" id="nameInput" class="input-field" placeholder="" />
-    </div>
-    <div class="input-group">
-      <label for="phoneInput" class="input-label">Phone :</label>
-      <input type="tel" id="phoneInput" class="input-field" placeholder="" />
-    </div>
-    <div class="input-group">
-      <label for="billAmtInput" class="input-label">Bill Amt (₹) :</label>
-      <input type="number" id="billAmtInput" class="input-field" placeholder="" />
-    </div>
-
-    <!-- 6. WhatsApp and Instagram Buttons with same format -->
+    <!-- 2. Connect with Us Title -->
+    <div class="section-title">Connect with Us</div>
+    <!-- 3. WhatsApp and Instagram Icons -->
     <div class="icon-grid">
-      <div class="icon-col" id="sendWhatsappBtn">
-        <img src="whatsapp_logo.png" alt="WhatsApp" class="icon-img" />
-        <span class="icon-label whatsapp-label">Submit & Get Super Offers</span>
+      <div class="icon-col" onclick="window.open('https://wa.me/+919911677119?text=Hi%20!%20Send%20Me%20amazing%20Deals', '_blank')">
+        <img src="whatsapp_logo.png" alt="WhatsApp" class="icon-img">
+        <span class="icon-label whatsapp-label">Get Super Offers</span>
       </div>
       <div class="icon-col" onclick="window.open('https://www.instagram.com/cafeurbanelixir?igsh=dzgzNG9xejhrcnpn', '_blank')">
-        <img src="instagram_logo.png" alt="Instagram" class="icon-img" />
+        <img src="instagram_logo.png" alt="Instagram" class="icon-img">
         <span class="icon-label instagram-label">Follow Us</span>
       </div>
     </div>
-    
-    <!-- 9 Pay With section remains the same -->
+    <!-- 4. Pay With Title -->
     <div class="pay-title">Pay With</div>
+    <!-- 5. PhonePe and Paytm Icons with custom gap -->
     <div class="icon-grid pay-icon-grid">
       <div class="icon-col" onclick="window.open('https://phon.pe/app', '_blank')">
-        <img src="phonepe_logo.png" alt="PhonePe" class="icon-img" />
+        <img src="phonepe_logo.png" alt="PhonePe" class="icon-img">
         <span class="icon-label phonepe-label">PhonePe</span>
       </div>
       <div class="icon-col" onclick="window.open('https://paytm.com', '_blank')">
-        <img src="paytm_logo.png" alt="Paytm" class="icon-img" />
+        <img src="paytm_logo.png" alt="Paytm" class="icon-img">
         <span class="icon-label paytm-label">Paytm</span>
       </div>
     </div>
+    <!-- 6. Reserve or Feedback Form -->
+    <div class="form-section">
+      <h2 style="font-weight:600; font-size:1.15em; color:#94704f; margin-bottom:0.6em;">Personal Details</h2>
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfgrZi271OlpEurlvdMCw1_-pohWvg2sfiDOT-vBNNaWcZRjw/viewform?embedded=true"
+        width="100%" height="730" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:10px; border:1px solid #ffd6a1;">
+        Loading…
+      </iframe>
+    </div>
   </main>
-
-  <!-- 9 Footer remains the same -->
+  <!-- 7. Footer -->
   <div class="footer">
     Thank You for visiting Urban Elixir!
   </div>
-
-  <script>
-    document.getElementById('sendWhatsappBtn').addEventListener('click', function () {
-      const name = document.getElementById('nameInput').value.trim();
-      const phone = document.getElementById('phoneInput').value.trim();
-      const billAmt = document.getElementById('billAmtInput').value.trim();
-
-      if (!name || !phone || !billAmt) {
-        alert('Please fill all details before sending the message.');
-        return;
-      }
-
-      const message = `Name : ${name}%0APhone : ${phone}%0ABill Amt : ${billAmt}`;
-      const waLink = `https://wa.me/919911677119?text=${message}`;
-      window.open(waLink, '_blank');
-    });
-  </script>
 </body>
 </html>
+
+
